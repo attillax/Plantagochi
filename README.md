@@ -1,2 +1,2 @@
 # Plantagochi
-[future] Simply game about Gardener &amp; Plants
+[current] Simply game about Gardener &amp; Plants
