@@ -10,6 +10,7 @@ DIR = ./Docs
 MAIN = Main.pdf
 IDEA = Idea.pdf
 TOOL = Tools.pdf
+CHRON = Chronology.pdf
 
 $(DIR)/$(MAIN): $(DIR)/$(REPORT:%.pdf=%.tex)
 	(cd $(DIR);\
@@ -35,4 +36,10 @@ tools:
 	pdflatex -interaction=nonstopmode $(TOOL:%.pdf=%.tex);\
 	rm -f $(TEMPFILES))
 
-.PHONY: clean, idea, tools
+chronology:
+	(cd $(DIR);\
+	pdflatex -interaction=nonstopmode $(CHRON:%.pdf=%.tex);\
+	pdflatex -interaction=nonstopmode $(CHRON:%.pdf=%.tex);\
+	rm -f $(TEMPFILES))
+
+.PHONY: clean, idea, tools, chronology
